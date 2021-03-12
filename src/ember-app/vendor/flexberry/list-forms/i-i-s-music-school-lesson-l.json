@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-music-school-lesson-e",
+  "editForm": "i-i-s-music-school-lesson-e",
+  "external": false,
+  "caption": "Lesson",
+  "name": "IISMusicSchoolLessonL",
+  "className": "LessonL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-music-school-lesson",
+      "modelProjection": "LessonL"
+    }
+  ]
+}

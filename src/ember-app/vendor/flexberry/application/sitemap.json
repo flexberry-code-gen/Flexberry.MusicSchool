@@ -1,0 +1,43 @@
+﻿{
+  "applicationCaption": "Music school",
+  "applicationTitle": "Music school",
+  "items": [
+    {
+      "link": null,
+      "menuName": "music-school",
+      "caption": "MusicSchool",
+      "title": "MusicSchool",
+      "children": [
+        {
+          "link": "i-i-s-music-school-pupil-l",
+          "menuName": null,
+          "caption": "Pupil",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-music-school-lesson-l",
+          "menuName": null,
+          "caption": "Lesson",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-music-school-teacher-l",
+          "menuName": null,
+          "caption": "Teacher",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-music-school-group-l",
+          "menuName": null,
+          "caption": "Group",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

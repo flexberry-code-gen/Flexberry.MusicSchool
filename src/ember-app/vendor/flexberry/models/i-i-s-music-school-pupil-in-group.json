@@ -1,0 +1,77 @@
+﻿{
+  "name": "IISMusicSchoolPupilInGroup",
+  "modelName": "i-i-s-music-school-pupil-in-group",
+  "className": "PupilInGroup",
+  "nameSpace": "IIS.MusicSchool",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "active",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "true",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "pupil",
+      "relatedTo": "i-i-s-music-school-pupil",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "group",
+      "relatedTo": "i-i-s-music-school-group",
+      "inverse": "pupilInGroup"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "PupilInGroupE",
+      "modelName": "i-i-s-music-school-pupil-in-group",
+      "attrs": [
+        {
+          "name": "active",
+          "caption": "Active",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Pupil",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Pupil",
+          "name": "pupil",
+          "relatedTo": "i-i-s-music-school-pupil",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,101 @@
+<h3 class="ui header">{{t "forms.i-i-s-music-school-lesson-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.mark
+      class=(if (v-get validationObject "mark" "isInvalid") "error")
+      label=(t "forms.i-i-s-music-school-lesson-e.mark-caption")
+      data-test-i-i-s-music-school-lesson-e-mark=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "mark" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-music-school-lesson-e.date-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
+      readonly=readonly
+      value=model.date
+      class=(if (v-get validationObject "date" "isInvalid") "error")
+      data-test-i-i-s-music-school-lesson-e-date=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "date" "message")}}
+  </div>
+
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.comment
+      class=(if (v-get validationObject "comment" "isInvalid") "error")
+      label=(t "forms.i-i-s-music-school-lesson-e.comment-caption")
+      data-test-i-i-s-music-school-lesson-e-comment=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "comment" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-music-school-lesson-e.teacher-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.teacher
+      class=(if (v-get validationObject "teacher" "isInvalid") "error")
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="teacher"
+      projection="TeacherL"
+      title=(t "forms.i-i-s-music-school-lesson-e.teacher-caption")
+      readonly=readonly
+      componentName="teacherLookup"
+      class=(if (v-get validationObject "teacher" "isInvalid") "error")
+      data-test-i-i-s-music-school-lesson-e-teacher=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "teacher" "message")}}
+  </div>
+
+  <div class="field">
+    <label>{{t "forms.i-i-s-music-school-lesson-e.pupil-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.pupil
+      class=(if (v-get validationObject "pupil" "isInvalid") "error")
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="pupil"
+      projection="PupilL"
+      title=(t "forms.i-i-s-music-school-lesson-e.pupil-caption")
+      readonly=readonly
+      componentName="pupilLookup"
+      class=(if (v-get validationObject "pupil" "isInvalid") "error")
+      data-test-i-i-s-music-school-lesson-e-pupil=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "pupil" "message")}}
+  </div>
+
+</form>

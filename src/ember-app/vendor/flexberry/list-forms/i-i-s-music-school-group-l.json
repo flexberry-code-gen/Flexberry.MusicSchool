@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-music-school-group-e",
+  "editForm": "i-i-s-music-school-group-e",
+  "external": false,
+  "caption": "Group",
+  "name": "IISMusicSchoolGroupL",
+  "className": "GroupL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-music-school-group",
+      "modelProjection": "GroupL"
+    }
+  ]
+}

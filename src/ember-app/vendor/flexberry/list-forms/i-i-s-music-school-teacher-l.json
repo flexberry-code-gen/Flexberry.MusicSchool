@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-music-school-teacher-e",
+  "editForm": "i-i-s-music-school-teacher-e",
+  "external": false,
+  "caption": "Teacher",
+  "name": "IISMusicSchoolTeacherL",
+  "className": "TeacherL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-music-school-teacher",
+      "modelProjection": "TeacherL"
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+﻿{
+  "name": "IISMusicSchoolLesson",
+  "modelName": "i-i-s-music-school-lesson",
+  "className": "Lesson",
+  "nameSpace": "IIS.MusicSchool",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "mark",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "comment",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "teacher",
+      "relatedTo": "i-i-s-music-school-teacher",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "pupil",
+      "relatedTo": "i-i-s-music-school-pupil",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "LessonE",
+      "modelName": "i-i-s-music-school-lesson",
+      "attrs": [
+        {
+          "name": "mark",
+          "caption": "Mark",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "date",
+          "caption": "Date",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "comment",
+          "caption": "Comment",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Teacher",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Teacher",
+          "name": "teacher",
+          "relatedTo": "i-i-s-music-school-teacher",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Pupil",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Pupil",
+          "name": "pupil",
+          "relatedTo": "i-i-s-music-school-pupil",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "LessonL",
+      "modelName": "i-i-s-music-school-lesson",
+      "attrs": [
+        {
+          "name": "mark",
+          "caption": "Mark",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "date",
+          "caption": "Date",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "comment",
+          "caption": "Comment",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Teacher",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Name",
+          "name": "teacher",
+          "relatedTo": "i-i-s-music-school-teacher",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Pupil",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Name",
+          "name": "pupil",
+          "relatedTo": "i-i-s-music-school-pupil",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

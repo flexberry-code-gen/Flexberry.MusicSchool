@@ -1,0 +1,89 @@
+﻿{
+  "name": "IISMusicSchoolGroup",
+  "modelName": "i-i-s-music-school-group",
+  "className": "Group",
+  "nameSpace": "IIS.MusicSchool",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "pupilCount",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "pupilInGroup",
+      "relatedTo": "i-i-s-music-school-pupil-in-group",
+      "inverse": "group"
+    }
+  ],
+  "projections": [
+    {
+      "name": "GroupE",
+      "modelName": "i-i-s-music-school-group",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "pupilCount",
+          "caption": "Pupil count",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "PupilInGroupE",
+          "caption": "Pupil in group",
+          "name": "pupilInGroup",
+          "relatedTo": "i-i-s-music-school-pupil-in-group",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "GroupL",
+      "modelName": "i-i-s-music-school-group",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "pupilCount",
+          "caption": "Pupil count",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

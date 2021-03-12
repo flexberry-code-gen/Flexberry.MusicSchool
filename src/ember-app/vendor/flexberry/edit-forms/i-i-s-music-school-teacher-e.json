@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Teacher",
+  "name": "IISMusicSchoolTeacherE",
+  "className": "TeacherE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-music-school-teacher",
+      "modelProjection": "TeacherE"
+    }
+  ]
+}

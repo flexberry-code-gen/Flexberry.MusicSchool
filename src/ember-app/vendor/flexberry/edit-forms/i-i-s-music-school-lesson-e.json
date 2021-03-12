@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Teacher",
+      "projection": "TeacherL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Pupil",
+      "projection": "PupilL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Lesson",
+  "name": "IISMusicSchoolLessonE",
+  "className": "LessonE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-music-school-lesson",
+      "modelProjection": "LessonE"
+    }
+  ]
+}

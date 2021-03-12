@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "pupil",
+      "displayAttributeName": "name",
+      "required": true,
+      "relationName": "PupilInGroup.Pupil",
+      "projection": "PupilL",
+      "detailModelName": "i-i-s-music-school-pupil-in-group"
+    }
+  ],
+  "external": false,
+  "caption": "Group",
+  "name": "IISMusicSchoolGroupE",
+  "className": "GroupE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-music-school-group",
+      "modelProjection": "GroupE"
+    }
+  ]
+}
